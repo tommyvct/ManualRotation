@@ -10,4 +10,4 @@ Once installed and running, if Auto Rotate is disengaged and the device rotated 
 Tap the `Rotate` button to rotate the screen. Tap elsewhere or swipe to the side to dismiss the notification. 
 
 ## Installation
-Currently there's no installer available. A manual installation is possible by copying files to `%LOCALAPPDATA%/Programs/ManualRotation` and run `ManualRotation.exe install` to register for startup. Similarly, uninstallation is as simple as run `ManualRotation.exe remove` and delete the files. 
+Currently there's no installer available. A manual installation is possible by copying files to `%LOCALAPPDATA%/Programs/ManualRotation` and run `ManualRotation.exe install` to register for startup. Similarly, uninstallation is as simple as kill the process in Task Manager, run `ManualRotation.exe remove` and delete the files. 
