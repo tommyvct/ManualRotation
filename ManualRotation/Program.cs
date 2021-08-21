@@ -36,6 +36,7 @@ namespace ManualRotation
                     case "uninstall":
                         Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true)?
                             .DeleteValue(ManualRotation);
+                        ToastNotificationManagerCompat.Uninstall();
                         MessageBox.Show("Uninstalled.", ManualRotation);
                         Environment.Exit(0);
                         break;
