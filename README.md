@@ -14,6 +14,6 @@ Currently there's no installer available. A manual installation is possible by c
 
 ## Build
 Open the `.sln` file with Visual Studio 2019+. 
-When building X64 binearies, make sure the line `<PlatformTarget>ARM64</PlatformTarget>` is commented out, and use `x64` configuration.  
-Similarly, when building ARM64 binearies, make sure the line `<PlatformTarget>ARM64</PlatformTarget>` is NOT commented out, and use`ARM64` configuration.  
+When building X64 binaries, make sure the line `<PlatformTarget>ARM64</PlatformTarget>` is commented out, and use `x64` configuration.  
+Similarly, when building ARM64 binaries, make sure the line `<PlatformTarget>ARM64</PlatformTarget>` is NOT commented out, and use`ARM64` configuration.  
 Please note that X64 build binaries will not work on ARM64 machines, and ARM64 build binaries will not run at all on X64 machines.  
