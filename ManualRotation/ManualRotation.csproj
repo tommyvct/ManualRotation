@@ -10,7 +10,7 @@
 
     <PlatformTarget>ARM64</PlatformTarget>
 
-    <ApplicationIcon>C:\Users\ws103\GitHub\ManualRotation\ManualRotation\e7ad.ico</ApplicationIcon>
+    <ApplicationIcon>e7ad.ico</ApplicationIcon>
 
     <UseWPF>True</UseWPF>
 
