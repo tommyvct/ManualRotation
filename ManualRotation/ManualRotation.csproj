@@ -8,8 +8,6 @@
     <MinimumPlatformVersion>10.0.17763.0</MinimumPlatformVersion>
     <Platforms>AnyCPU;ARM64</Platforms>
 
-    <PlatformTarget>ARM64</PlatformTarget>
-
     <ApplicationIcon>e7ad.ico</ApplicationIcon>
 
     <UseWPF>True</UseWPF>

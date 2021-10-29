@@ -29,7 +29,7 @@ namespace ManualRotation
                 {
                     case "install":
                         Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true)?
-                            .SetValue(ManualRotation, "\"" + System.Reflection.Assembly.GetEntryAssembly()?.Location + "\"");
+                          .SetValue(ManualRotation, "\"" + Environment.ProcessPath + "\"");
                         MessageBox.Show("Installed.", ManualRotation);
                         break;
                     case "remove":

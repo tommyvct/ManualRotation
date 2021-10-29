@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ManualRotation": {
+      "commandName": "Project",
+      "commandLineArgs": "install"
+    }
+  }
+}
