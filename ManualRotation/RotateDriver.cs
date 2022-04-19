@@ -66,6 +66,30 @@ public class RotationDriver
         return result;
     }
 
+    public static Orientations GetCurrentOrientation(uint DisplayNumber)
+    {
+        if (DisplayNumber == 0)
+            throw new ArgumentOutOfRangeException("DisplayNumber", DisplayNumber, "First display is 1.");
+
+        bool result = false;
+        DISPLAY_DEVICE d = new DISPLAY_DEVICE();
+        DEVMODE dm = new DEVMODE();
+        d.cb = Marshal.SizeOf(d);
+
+        if (!NativeMethods.EnumDisplayDevices(null, DisplayNumber - 1, ref d, 0))
+            throw new ArgumentOutOfRangeException("DisplayNumber", DisplayNumber, "Number is greater than connected displays.");
+
+        if (0 != NativeMethods.EnumDisplaySettings(
+                d.DeviceName, NativeMethods.ENUM_CURRENT_SETTINGS, ref dm))
+        {
+            return (Orientations)dm.dmDisplayOrientation;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
     public static void ResetAllRotations()
     {
         try

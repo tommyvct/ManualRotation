@@ -60,11 +60,27 @@ namespace ManualRotation
             }
 
             SimpleOrientationSensor? sensor = SimpleOrientationSensor.GetDefault();
-            previousOrientation = sensor.GetCurrentOrientation();
 
             if (sensor == null)
             {
                 Environment.Exit(1);
+            }
+
+            switch (RotationDriver.GetCurrentOrientation(1))
+            {
+                default:
+                case RotationDriver.Orientations.DEGREES_CW_0:
+                    previousOrientation = SimpleOrientation.NotRotated;
+                    break;
+                case RotationDriver.Orientations.DEGREES_CW_90:
+                    previousOrientation = SimpleOrientation.Rotated90DegreesCounterclockwise;
+                    break;                    
+                case RotationDriver.Orientations.DEGREES_CW_180:
+                    previousOrientation = SimpleOrientation.Rotated180DegreesCounterclockwise;
+                    break;
+                case RotationDriver.Orientations.DEGREES_CW_270:
+                    previousOrientation = SimpleOrientation.Rotated270DegreesCounterclockwise;
+                    break;
             }
 
             ToastNotificationManagerCompat.OnActivated += toastArgs =>
